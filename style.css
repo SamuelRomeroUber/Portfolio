@@ -59,7 +59,7 @@ button {
     cursor: pointer;
 }
 
-/* Estilos para los botones */
+/* Estilos para los botones del navegador */
 .navegador ul li button {
     background: none;
     border: 2px solid white;
@@ -98,10 +98,6 @@ button {
     text-align: center;
 
     /*Animación inicial*/
-    /*opacity: 0;
-    transform: translateY(-50px);
-    animation: fadeIn 1.5s ease-out forwards;*/
-
     opacity: 0;
     transform: translateX(-100vw) rotate(-15deg);
     animation: slideIn 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
@@ -118,18 +114,6 @@ button {
 }
 
 /*Aqui defino la animación*/
-/*
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-*/
 @keyframes slideIn {
     0% {
         opacity: 0;
@@ -145,7 +129,6 @@ button {
     }
 }
 
-/*Contenedor experiencia*/
 .contenedor-experiencia {
     background-color: #444;
     color: white;
@@ -154,23 +137,48 @@ button {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
     border: 3px solid #333;
     text-align: center;
-    width: 300px;
+    width: 800px;
     margin-top: 15px;
 
-    /* Estado inicial oculto */
+    /* Esto lo utilizo para que se ponga el estado incial en 0 */
     height: 0;
     opacity: 0;
     overflow: hidden;
     transition: height 0.5s ease, opacity 0.5s ease;
 }
 
-/* Cuando se activa, se expande */
+/* Cuando le doy al botón se abre el container */
 .contenedor-experiencia.activo {
-    height: 100px;
+    height: auto;
     opacity: 1;
 }
 
-#btnApertura{
-    background-color: #222;
+#btnApertura {
+    background-color: #333;
     color: white;
+    border: 1px solid #444;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#btnApertura:hover {
+    background-color: #555;
+}
+
+#traductorBtn {
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#traductorBtn:hover {
+    background-color: #555;
 }
